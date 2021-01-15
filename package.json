@@ -1,24 +1,25 @@
 {
-  "name": "json-server-test",
-  "version": "1.0.0",
-  "description": "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eduhds/json-server-test)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eduhds/json-server-test.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eduhds/json-server-test/issues"
-  },
-  "homepage": "https://github.com/eduhds/json-server-test#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "ip": "^1.1.5"
-  }
+	"name": "json-server-test",
+	"version": "1.0.0",
+	"description": "[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/eduhds/json-server-test)",
+	"main": "index.js",
+	"scripts": {
+		"start": "node .",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/eduhds/json-server-test.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/eduhds/json-server-test/issues"
+	},
+	"homepage": "https://github.com/eduhds/json-server-test#readme",
+	"dependencies": {
+		"express": "^4.17.1",
+		"ip": "^1.1.5"
+	}
 }
