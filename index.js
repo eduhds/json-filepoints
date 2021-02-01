@@ -33,7 +33,7 @@ for (const get of config.gets) {
 }
 
 for (const post of config.posts) {
-	app.get(`/${post}`, (req, res) => {
+	app.post(`/${post}`, (req, res) => {
 		console.log(`/${post} Body:`, req.body);
 		const json = require(`./json/${post}.json`);
 		res.json(json);
