@@ -11,7 +11,7 @@ JSON files as endpoints.
 - Place your `.json` files in a folder so that the path matches the desired endpoint
 - You can organize the files via the method (GET, POST, ...) if you prefer
 
-> Default folder is `json` if not spefified
+> Default folder is `json` if not specified
 
 ```
 /endpoint
