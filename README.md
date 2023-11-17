@@ -1,29 +1,56 @@
-# JSON-SERVER-TEST
+# JSON-FILEPOINTS
+
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=plastic&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=plastic&logo=express&logoColor=%2361DAFB)
+![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=plastic&logo=yarn&logoColor=white)
+
+JSON files as endpoints.
 
 ## Usage
 
--   Edite o arquivo `config.json` adicionando os nomes das rotas:
+- Place your `.json` files in a folder so that the path matches the desired endpoint
+- You can organize the files via the method (GET, POST, ...) if you prefer
 
-```json
-{
-	"gets": ["test-get", ...],
-	"posts": ["test-post", ...]
-}
-```
-
--   Para cada nome de rota, adicione um arquivo JSON de mesmo nome no diretório `json`
+> Default folder is `json` if not spefified
 
 ```
-json/
-    test-get.json
-    test-post.json
-    ...
+/endpoint
+/folder/to/endpoint
+/my/get/endpoint
+/my/post/endpoint
 ```
 
--   Start with Node
-
-```bash
-npm run start
+```
+json
+├── endpoint.json
+├── folder
+│   └── to
+│       └── endpoint.json
+├── GET
+│   └── my
+│       └── get
+│           └── endpoint.json
+└── POST
+    └── my
+        └── post
+            └── endpoint.json
 ```
 
--   Access on `localhost:3030`
+- Start server
+
+```sh
+# Default port and source directory
+node json-filepoints.js
+
+# Change port with -p
+node json-filepoints.js -p <port>
+
+# Change source directory with -d
+node json-filepoints.js -d <folder>
+```
+
+- Try
+
+```sh
+curl http://localhost:3030/folder/to/endpoint
+```
