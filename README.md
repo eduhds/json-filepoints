@@ -44,7 +44,7 @@ json
 
 ### Download single JS bundle file
 
-_TODO_: Add download instructions
+Download from [releases](https://github.com/eduhds/json-filepoints/releases) and unzip json-filepoints.js.
 
 ```sh
 # Default port and source directory
