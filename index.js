@@ -3,6 +3,7 @@ const cors = require('cors');
 const express = require('express');
 const parseArgs = require('minimist');
 const consola = require('consola').default;
+const package = require('./package.json');
 
 /**
  * @typedef {Object} Args
@@ -54,7 +55,7 @@ app.all('*', (req, res) => {
 });
 
 app.listen(port, () => {
-  consola.success(`JSON Filepoints running on http://localhost:${port}...`);
+  consola.success(`JSON Filepoints v${package.version} running on http://localhost:${port}`);
 });
 
 app.on('error', error => {
