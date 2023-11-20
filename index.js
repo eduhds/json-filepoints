@@ -62,6 +62,12 @@ app.on('error', error => {
   consola.error(error);
 });
 
+process.on('SIGINT', () => {
+  console.log('');
+  consola.info('Interrupted.');
+  process.exit(0);
+});
+
 /**
  * Reads a file from the specified path.
  *
