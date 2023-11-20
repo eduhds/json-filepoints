@@ -15,7 +15,7 @@ const package = require('./package.json');
 const argv = parseArgs(process.argv.slice(2));
 
 const port = argv.p || 3030;
-const sourceDir = argv.d || 'json';
+const sourceDir = argv.d || './json';
 
 const app = express();
 
@@ -36,11 +36,11 @@ app.all('*', (req, res) => {
       .filter(i => i && i !== '/')
       .join('/');
 
-    let data = readFile(`./${sourceDir}/${method}/${jsonFilePath}.json`);
+    let data = readFile(`${sourceDir}/${method}/${jsonFilePath}.json`);
 
     // Don't have a 'method' directory, try root directory
     if (!data) {
-      data = readFile(`./${sourceDir}/${jsonFilePath}.json`);
+      data = readFile(`${sourceDir}/${jsonFilePath}.json`);
     }
 
     if (!data) {
